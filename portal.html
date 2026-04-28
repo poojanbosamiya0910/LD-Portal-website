@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LD College of Engineering - Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="glass-container">
+        <header>
+            <div class="logo">
+                <h1>LD College of Engineering</h1>
+                <p>Ahmedabad, Gujarat</p>
+            </div>
+            <nav>
+                <button onclick="showPortal('home')" class="nav-btn active" id="btn-home">Home</button>
+                <button onclick="showPortal('admin')" class="nav-btn" id="btn-admin">Admin Portal</button>
+                <button onclick="showPortal('faculty')" class="nav-btn" id="btn-faculty">Faculty Portal</button>
+                <button onclick="showPortal('student')" class="nav-btn" id="btn-student">Student Portal</button>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="portal-section active">
+                <div class="welcome-box">
+                    <h2>Welcome to the LDCE Digital Portal</h2>
+                    <p>Select a portal from the navigation above to get started.</p>
+                </div>
+            </section>
+
+            <!-- Admin Portal -->
+            <section id="admin" class="portal-section">
+                <h2>Admin Dashboard</h2>
+                <div class="card">
+                    <h3>System Overview</h3>
+                    <p>Manage college operations, monitor portals, and configure settings here.</p>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <h4>Total Students</h4>
+                            <p>4,520</p>
+                        </div>
+                        <div class="stat-box">
+                            <h4>Total Faculty</h4>
+                            <p>350</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Faculty Portal -->
+            <section id="faculty" class="portal-section">
+                <h2>Faculty Portal</h2>
+                <div class="card">
+                    <h3>Physics Department Faculty</h3>
+                    <ul class="faculty-list">
+                        <li><span class="faculty-name">Vaishali Adhvariyu ma'am</span> - Professor</li>
+                        <li><span class="faculty-name">Hiral raval ma'am</span> - Assistant Professor</li>
+                        <li><span class="faculty-name">Jignesh hirpara sir</span> - Associate Professor</li>
+                    </ul>
+                </div>
+                
+                <div class="card mt-2">
+                    <h3>6-Month Attendance Tracker (Physics Department)</h3>
+                    <p class="subtitle">Track monthly total lectures delivered vs planned. Click on cells to edit.</p>
+                    <div class="table-container">
+                        <table class="glass-table">
+                            <thead>
+                                <tr>
+                                    <th>Faculty Name</th>
+                                    <th>January</th>
+                                    <th>February</th>
+                                    <th>March</th>
+                                    <th>April</th>
+                                    <th>May</th>
+                                    <th>June</th>
+                                </tr>
+                            </thead>
+                            <tbody contenteditable="true">
+                                <tr>
+                                    <td>Vaishali Adhvariyu</td>
+                                    <td>18/20</td>
+                                    <td>20/20</td>
+                                    <td>19/22</td>
+                                    <td>22/22</td>
+                                    <td>15/15</td>
+                                    <td>20/20</td>
+                                </tr>
+                                <tr>
+                                    <td>Hiral raval</td>
+                                    <td>20/20</td>
+                                    <td>19/20</td>
+                                    <td>21/22</td>
+                                    <td>20/22</td>
+                                    <td>15/15</td>
+                                    <td>19/20</td>
+                                </tr>
+                                <tr>
+                                    <td>Jignesh hirpara</td>
+                                    <td>19/20</td>
+                                    <td>20/20</td>
+                                    <td>22/22</td>
+                                    <td>21/22</td>
+                                    <td>14/15</td>
+                                    <td>20/20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Student Portal -->
+            <section id="student" class="portal-section">
+                <h2>Student Portal</h2>
+                <div class="card">
+                    <div class="attendance-info">
+                        <h3><span class="icon">💡</span> Attendance Rule</h3>
+                        <p>To maintain a minimum of <strong>75% attendance</strong>:</p>
+                        <p>If there are <strong>60 total lectures</strong> in a semester for a subject, a student must attend at least <strong>45 lectures</strong>. (0.75 × Total Lectures = Required Attendance).</p>
+                    </div>
+                </div>
+
+                <div class="card mt-2">
+                    <h3>Student Details & Physics Marks (Computer Engineering)</h3>
+                    <p class="subtitle">Click on student names or marks to edit them.</p>
+                    <div class="table-container">
+                        <table class="glass-table student-table">
+                            <thead>
+                                <tr>
+                                    <th>Enrollment No.</th>
+                                    <th>Student Name</th>
+                                    <th>Branch</th>
+                                    <th>Physics Marks (Out of 100)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Students will be generated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
